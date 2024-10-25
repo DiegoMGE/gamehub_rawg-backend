@@ -15,8 +15,6 @@ const URL = `${API_URL}/games?key=${API_KEY}`;
 app.get('/games', async (req, res) => {
   console.log('GET /games route hit');
   try {
-    console.log("Making request to:", URL);
-
     const response = await axios.get(URL);
 
     res.json(response.data);
